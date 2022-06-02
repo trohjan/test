@@ -74,7 +74,7 @@
     <div class="container d-flex justify-content-center">
       <div class="card mt-5 px-3 py-4">
         <div class="d-flex flex-row justify-content-around">
-          <div class="mpesa"><span>Mpesa </span></div>
+          <div class="mpesa" style="float:left"><span>Mpesa </span></div>
           
         </div>
         <div class="media mt-4 pl-2">
@@ -98,7 +98,7 @@
                 </div>
              
                 <div class="col-12">
-                  <button type="submit" class="btn btn-success" name="submit" value="submit">Donate</button>
+                  <button type="submit" class="btn btn-success" name="submit" value="submit">Pay</button>
                 </div>
               </form>
               <!--bs5 input-->
