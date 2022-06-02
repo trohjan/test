@@ -5,8 +5,8 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = 'kAhp9gDXbjoQmZbblIOVvVf92bOAwIvg'; //Fill with your app Consumer Key
-  $consumerSecret = 'yRiKmCLkJhXJfTHc'; // Fill with your app Secret
+  $consumerKey = '5kujJZ7SsiFgSKGmgnOJT0cDcAUbeFoW'; //Fill with your app Consumer Key
+  $consumerSecret = 'EFYIOCI2GB2OXnjI'; // Fill with your app Secret
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
   
    $PartyA = $_POST['phone']; // This is your phone number, 
   $AccountReference = '2255';
-  $TransactionDesc = 'Test Payment';
+  $TransactionDesc = 'Payment';
   $Amount = $_POST['amount'];;
  
   # Get the timestamp, format YYYYmmddhms -> 20181004151020
@@ -42,7 +42,7 @@ if(isset($_POST['submit'])){
   $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
   # callback url
-  $CallBackURL = 'https://fathomless-plains-30016.herokuapp.com/callback_url.php';  
+  $CallBackURL = 'https://rocky-spire-38260.herokuapp.com/callback_url.php';  
 
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
