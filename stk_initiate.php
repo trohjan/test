@@ -5,12 +5,12 @@ if(isset($_POST['submit'])){
   date_default_timezone_set('Africa/Nairobi');
 
   # access token
-  $consumerKey = '5kujJZ7SsiFgSKGmgnOJT0cDcAUbeFoW'; //Fill with your app Consumer Key
-  $consumerSecret = 'EFYIOCI2GB2OXnjI'; // Fill with your app Secret
+  $consumerKey = 'vfohdjeD7wLqeth5OGksIoyE3Uvd1U4o'; //Fill with your app Consumer Key
+  $consumerSecret = 'MPUbpkKjDwC67g6D'; // Fill with your app Secret
 
   # define the variales
   # provide the following details, this part is found on your test credentials on the developer account
-  $BusinessShortCode = '174379';
+  $BusinessShortCode = '4091515';
   $Passkey = 'bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919';  
   
   /*
@@ -24,7 +24,7 @@ if(isset($_POST['submit'])){
   */
   
    $PartyA = $_POST['phone']; // This is your phone number, 
-  $AccountReference = '0115586624';
+  $AccountReference = 'TABITHA NJOGU';
   $TransactionDesc = 'Payment';
   $Amount = $_POST['amount'];;
  
@@ -38,11 +38,11 @@ if(isset($_POST['submit'])){
   $headers = ['Content-Type:application/json; charset=utf8'];
 
     # M-PESA endpoint urls
-  $access_token_url = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
-  $initiate_url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+  $access_token_url = 'https://api.safaricom.co.ke/oauth/v1/generate';
+  $initiate_url = 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
 
   # callback url
-  $CallBackURL = 'https://rocky-spire-38260.herokuapp.com/callback_url.php';  
+  $CallBackURL = 'https://www.thenopeinstitute.org/mulikaafyanachapaa/callback_url.php';  
 
   $curl = curl_init($access_token_url);
   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);

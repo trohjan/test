@@ -19,3 +19,11 @@
      fclose($log);
  
      echo $response;
+     $con = mysqli_connect("localhost","root","","mpesa"); //Connets to the dashboard
+
+    $sql = "INSERT INTO `responses` (`Response`) VALUES ('$mpesaResponse')";
+    $rs = mysqli_query($con, $sql); //Record the response to the database
+    if($rs)
+    {
+        echo "Records Inserted";
+    }
